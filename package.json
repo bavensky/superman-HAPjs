@@ -1,0 +1,22 @@
+{
+  "name": "CMMC-HAP-DEMO",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "cmmc-hapjs": "bin/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "8": "0.0.1",
+    "cmmc-mqtt": "^0.1.6",
+    "hap-nodejs": "^0.4.47",
+    "node-fetch": "^2.1.1",
+    "node-persist": "^3.0.1",
+    "yalm": "^4.1.0"
+  }
+}
