@@ -4,7 +4,7 @@ var Characteristic = require('hap-nodejs').Characteristic
 var uuid = require('hap-nodejs').uuid
 
 const mqtt = require('cmmc-mqtt').mqtt
-let mqtt1 = mqtt.create('mqtt://xxxx:xxxx@odin.cmmc.io');
+let mqtt1 = mqtt.create('mqtt://xxxx:xxxx@xxxx.cmmc.io');
 
 const get = (url) => {
   const options = {method: 'GET', headers: {'Content-Type': 'application/json', timeout: 5 * 1000}}
@@ -29,9 +29,9 @@ var LightController = {
   setPower: function (status) { //set power of accessory
     if (this.outputLogs) console.log('Turning the \'%s\' %s', this.name, status ? 'on' : 'off')
       if (status) {
-        mqtt1.publish('CMMC/PLUG-001/$/command', "ON");
+        mqtt1.publish('CMMC/$/command', "ON");
       } else {
-        mqtt1.publish('CMMC/PLUG-001/$/command', "OFF");
+        mqtt1.publish('CMMC/$/command', "OFF");
       }
     this.power = status
   },
